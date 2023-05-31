@@ -6,6 +6,7 @@ var gGame
 var gPoses
 const MINE = '💣'
 const FLAG = '⛳'
+const HINT = '💡'
 
 
 function onInit(size=4, numMines=2) {
@@ -16,7 +17,7 @@ function onInit(size=4, numMines=2) {
         shownCount: 0,
         markedCount: 0,
         secsPassed: 0,
-        lives: 1
+        lives: 3
     }
 
     gLevel = {
