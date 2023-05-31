@@ -12,7 +12,6 @@ function initPoses() {
             poses.push(pos)
         }
     }
-    // console.log('poses',poses)
     return poses
 }
 
