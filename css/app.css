@@ -28,10 +28,31 @@ h1{
     color: var(--clr4);
 }
 
+h3{
+    cursor: pointer;
+    width: 100px;
+    margin:auto;
+    margin-bottom: 20px;
+}
+
+.highlight{
+    background-color: yellow;
+    width: 100px;
+    margin:auto;
+}
+
 h6{
     color: var(--clr5);
 }
 
+.level_btn{
+    background-color: var(--clr4);
+    color: var(--clr1);
+    border-radius: 7px;
+    width: 70px;
+    height: 40px;
+
+}
 
 .smile_img{
     width: 40px;
@@ -55,6 +76,17 @@ h6{
     cursor: default;
     transition:300ms;
     color: white
+}
+
+#timer {
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    font-size: 30px;
+    border-width: 5px;
+}
+.safe{
+    border: 5px solid var(--clr1) ;
 }
 /* 
 .mine {

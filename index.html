@@ -10,18 +10,24 @@
 <body onload="onInit()">
     <h1>Mine Sweeper</h1>
 
-    <button onclick="onInit()">Beginner</button>
-    <button onclick="onInit(8,14)">Medium</button>
-    <button onclick="onInit(12,32)">Expert</button>
+    <button class="level_btn" onclick="onInit()">Beginner</button>
+    <button class="level_btn" onclick="onInit(8,14)">Medium</button>
+    <button class="level_btn" onclick="onInit(12,32)">Expert</button>
     <img class="smile_img" src="img/happy.jpg" onclick="onSmileClick(this)">
      
     
     <h2>Lives: <span>3</span></h2>
+    <h3 title="Hints" onclick="clickHint()">💡💡💡</h3>
+    
+    <div id="timer">0.000</div>
+
     <table class="board-container" >
         <tbody class="board"></tbody>
     </table>
-    
-    <h6>@Yifat Becher</h6>
+    <button class="level_btn" onclick="onSafeClick()"> safe click</button>
+    <h5> <span>3</span> clicks available</h5>
+
+    <h6>@Yifat Becher ver3</h6>
     <script src="js/utils.js"></script>
     <script src="js/game.js"></script>
 
