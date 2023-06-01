@@ -10,34 +10,34 @@
 <body onload="onInit()">
     <h1>Mine Sweeper</h1>
 
+    <table class="board-container" >
+        <tbody class="board"></tbody>
+    </table>
+
     <button class="level_btn" onclick="onInit()">Beginner</button>
     <button class="level_btn" onclick="onInit(8,14)">Medium</button>
     <button class="level_btn" onclick="onInit(12,32)">Expert</button>
     <img class="smile_img" src="img/happy.jpg" onclick="onSmileClick(this)">
-     
-    
+      
     <h2>Lives: <span></span></h2>
-    <h3 class = "nonshow" onclick="onHintsClick()">💡💡💡</h3>
+    
     
     <div id="timer">0.000</div>
-
-    <table class="board-container" >
-        <tbody class="board"></tbody>
-    </table>
-    <div>
-        <button class="safe_btn nonshow"  onclick="onSafeClick()"> safe click</button>
-        <button class="mega_btn nonshow"  onclick="onMegaHint()"> Mega Hint</button>
-        <h5 class = "nonshow"> <span>3</span> clicks available</h5>
-
+   
+    <div id="btn" class="btn">
+        <h3 onclick="onHintsClick()"></h3>
+        <button class="safe_btn"  onclick="onSafeClick()"> safe click</button>
+        <button class="mega_btn"  onclick="onMegaHint()"> Mega Hint</button>
+        <h4><span>3</span> safe clicks available</h4> 
     </div>
 
     <div class="modal">
-        <h4 class="msg">Mega Hint Steps:</h4>
+        <h5 class="msg">Mega Hint Steps:</h4>
         <h5 class="msg">step 1:click the top-left corner</h5>
         <h5 class="msg">step 2: click the button-right corner</h5>
     </div>
 
-    <h6>@Yifat Becher ver5</h6>
+    <h6>@Yifat Becher ver6</h6>
     <script src="js/utils.js"></script>
     <script src="js/game.js"></script>
 
