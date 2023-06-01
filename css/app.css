@@ -34,12 +34,12 @@ h3{
     margin:auto;
     margin-bottom: 20px;
 }
-h5{
+/* h5{
     display:none
-}
+} */
 
 h6{
-    color: var(--clr5);
+    color: var(--clr2);
 }
 
 
@@ -88,7 +88,7 @@ h6{
     font-size: 30px;
     border-width: 5px;
 }
-.safe{
+.mark{
     background-color: var(--clr6);
     border: 5px solid var(--clr1) ;
     margin-top: 10px;
@@ -100,23 +100,33 @@ h6{
     background-color: var(--clr4);
     color: var(--clr1);
     border-radius: 7px;
-    width: 70px;
+    width: 100px;
     height: 40px;
-    /* display:none */
+    
 }
-.safe_nonshow{
+
+.mega_btn{
+    background-color: var(--clr4);
+    color: var(--clr1);
+    border-radius: 7px;
+    width: 100px;
+    height: 40px;
+    
+}
+
+.nonshow{
     display:none
 }
-/* 
-.mine {
-    background-color: var(--clr1);
-    cursor: pointer;
-    transition:300ms
-} */
-/* 
-.marked {
-    background-color: var(--clr3);
-    cursor: pointer;
-    transition:300ms
-} */
 
+
+.modal {
+    display: none;
+    border: solid 3px var(--clr1);
+    width: 170px;
+    height: 170px;
+    background-color: var(--clr5);
+    color:var(--clr2);  
+    position: absolute;
+    top: 200px;
+    right: 20px;   
+  }

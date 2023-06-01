@@ -19,13 +19,22 @@ function initPoses() {
     return poses
 }
 
+
+function openModal(msg) {
+    const elModal = document.querySelector('.modal')
+    elModal.style.display = 'block'
+}
+
+function closeModal() {
+    const elModal = document.querySelector('.modal')
+    elModal.style.display = 'none'
+}
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
-
-
 
 function stopTimer() {
     clearInterval(gTimerInterval)
