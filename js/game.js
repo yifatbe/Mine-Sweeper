@@ -55,15 +55,34 @@ function buildBoard() {
     return board
 }
 function firstClick(idxI, idxJ) {
-    // setRandtMines(gBoard, idxI, idxJ)
-    gBoard[0][0].isMine = true
-    gBoard[1][1].isMine = true
-    gBoard[2][2].isMine = true
-    gBoard[3][3].isMine = true
+    setRandtMines(gBoard, idxI, idxJ)
+    // gBoard[2][1].isMine = true
+    // gBoard[3][1].isMine = true
+    // gBoard[4][1].isMine = true
+    // gBoard[5][1].isMine = true
+    // gBoard[2][6].isMine = true
+    // gBoard[3][6].isMine = true
+    // gBoard[4][6].isMine = true
+    // gBoard[5][6].isMine = true
+    // gBoard[2][3].isMine = true
+    // gBoard[2][4].isMine = true
+    // gBoard[2][5].isMine = true
+    // gBoard[2][6].isMine = true
+    // gBoard[6][2].isMine = true
+    // gBoard[6][3].isMine = true
+    // gBoard[6][4].isMine = true
+    // gBoard[6][5].isMine = true
+    // gBoard[6][6].isMine = true
 
     setMinesNegsCount(gBoard)
     renderBoard(gBoard)
     gGame.isFirstClick = false
+
+    var elSafeBtn = document.querySelector('.safe_btn')
+    elSafeBtn.classList.remove('safe_nonshow')
+    var elH5 = document.querySelector('h5')
+    elH5.style.display = 'block'
+
     startTimer()
 }
 
@@ -195,10 +214,10 @@ function expandShown(board, idxI, idxJ) {
             var currCell = board[i][j]
             console.log('show cell:' ,i,j,'num negs:' ,currCell.minesAroundCount)
             if (!currCell.isMarked) currCell.isShown = true
-            // if (currCell.minesAroundCount === 0) {   
-            //     currCell.isExpand = true
-            //     expandShown (board, i,j)
-            // }
+            if (currCell.minesAroundCount === 0 && !currCell.isExpand) {   
+                currCell.isExpand = true
+                expandShown (board, i,j)
+            }
         }
     }
 
@@ -236,10 +255,19 @@ function onSafeClick(){
     var selector = `[data-i="${randPos.i}"][data-j="${randPos.j}"]`            
     var elCell = document.querySelector(selector)
     elCell.classList.add('safe')
-    
     document.querySelector('h5 span').innerText = gGame.safeClick
+    
+    if (gGame.safeClick <=0) {
+        
+        var elSafeBtn = document.querySelector('.safe_btn')
+        // elSafeBtn.classList.add('safe_nonshow')
+        elSafeBtn.style.display = 'none'
+        var elH5 = document.querySelector('h5')
+        elH5.style.display = 'none'
+    }
 
     setTimeout(clearSafe, 1000, elCell)
+    
 }
 
 function clearSafe(elCell){

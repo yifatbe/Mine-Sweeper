@@ -34,17 +34,20 @@ h3{
     margin:auto;
     margin-bottom: 20px;
 }
-
-.highlight{
-    background-color: yellow;
-    width: 100px;
-    margin:auto;
+h5{
+    display:none
 }
 
 h6{
     color: var(--clr5);
 }
 
+
+.highlight{
+    background-color: yellow;
+    width: 100px;
+    margin:auto;
+}
 .level_btn{
     background-color: var(--clr4);
     color: var(--clr1);
@@ -86,7 +89,23 @@ h6{
     border-width: 5px;
 }
 .safe{
+    background-color: var(--clr6);
     border: 5px solid var(--clr1) ;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+
+.safe_btn{
+    background-color: var(--clr4);
+    color: var(--clr1);
+    border-radius: 7px;
+    width: 70px;
+    height: 40px;
+    /* display:none */
+}
+.safe_nonshow{
+    display:none
 }
 /* 
 .mine {
